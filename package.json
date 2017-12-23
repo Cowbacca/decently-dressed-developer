@@ -26,7 +26,8 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "typecheck": "node_modules/.bin/tsc --noemit",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gatsby build && gatsby serve"
   },
   "devDependencies": {
     "@types/node": "^8.5.2",
