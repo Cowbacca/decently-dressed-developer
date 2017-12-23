@@ -1,11 +1,18 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Decently Dressed Developer
+This is the source code for [the Decently Dressed Developer](https://decentlydresseddeveloper.com).  It uses [Gatsby](https://www.gatsbyjs.org) to generate a static website from React components.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+## Development
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+You will need node version 8.3+ installed.
+
+First, install dependencies with NPM: 
 ```
-gatsby new gatsby-example-site
+npm i
+```
+
+To run the project in development mode:
+```
+npm run develop
 ```
 
 ## Deploy
