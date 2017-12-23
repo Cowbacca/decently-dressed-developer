@@ -8,16 +8,21 @@ interface IndexPageProps {
 
 const IndexPage = ({data}: IndexPageProps) => (
   <div>
-    <h1>Hi fool</h1>
+    <h1>Welcome!</h1>
     <p>Welcome to the Decently Dressed Developer.</p>
-    <p>Now go build something great.</p>
+    <p>It ain't the greatest name but it's the one we got.</p>
     <h2>All Articles</h2>
     <ul>
       {data.allContentfulArticle.edges.map(
-        edge => (<li>{edge.node.title}</li>)
+        edge => (
+          <li>
+            <Link to={`/articles/${edge.node.slug}`}>
+              {edge.node.title}
+            </Link>
+          </li>
+        )
       )}
     </ul>
-    <Link to="/page-2/">Go to page 2</Link>
   </div>
 )
 
@@ -30,6 +35,7 @@ export const pageQuery = graphql`
         node {
           title
           createdAt
+          slug
         }
       }
     }

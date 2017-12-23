@@ -11,7 +11,7 @@ const Header = () => (
         <Link
           to="/"
         >
-          Decently Dressed Developer
+          The Decently Dressed Developer
         </Link>
       </h1>
     </div>
