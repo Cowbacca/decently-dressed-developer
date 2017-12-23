@@ -10,6 +10,11 @@ First, install dependencies with NPM:
 npm i
 ```
 
+Create an env file using the example as a template:
+```
+cp .env.example .env
+```
+
 To run the project in development mode:
 ```
 npm run develop
