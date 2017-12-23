@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as  React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
@@ -19,13 +18,9 @@ const Header = () => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{margin: 0}}>
         <Link
           to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
         >
           Gatsby
         </Link>
@@ -34,16 +29,20 @@ const Header = () => (
   </div>
 )
 
-const TemplateWrapper = ({ children }) => (
+interface GatsbyLayoutProps {
+  children: () => any
+}
+
+const TemplateWrapper = ({children}: GatsbyLayoutProps) => (
   <div>
     <Helmet
       title="Gatsby Default Starter"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {name: 'description', content: 'Sample'},
+        {name: 'keywords', content: 'sample, something'},
       ]}
     />
-    <Header />
+    <Header/>
     <div
       style={{
         margin: '0 auto',
@@ -56,9 +55,5 @@ const TemplateWrapper = ({ children }) => (
     </div>
   </div>
 )
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
 
 export default TemplateWrapper
