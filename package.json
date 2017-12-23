@@ -26,10 +26,12 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "typecheck": "node_modules/.bin/tsc --noemit",
+    "typecheck": "tsc --noemit",
+    "lint": "tslint 'src/*.ts?(x)' 'src/**/*.ts?(x)'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gatsby build && gatsby serve"
+    "start": "gatsby build && gatsby serve",
+    "graphql-schema": "apollo-codegen introspect-schema http://localhost:8000/___graphql --output schema.json",
+    "graphql-queries": "apollo-codegen generate **/*.tsx --target typescript --tag-name graphql --schema schema.json --output src/graghql-query-types.ts"
   },
   "devDependencies": {
     "@types/dotenv": "^4.0.2",
@@ -37,6 +39,8 @@
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
     "@types/react-router-dom": "^4.2.3",
+    "apollo-codegen": "^0.18.3",
+    "graphql-code-generator": "^0.8.14",
     "prettier": "^1.9.2",
     "tslint": "^5.8.0",
     "tslint-react": "^3.2.0",

@@ -160,3 +160,7 @@ public/
 # All idea files
 .idea/
 *.iml
+
+# GraphQL generated files
+schema.json
+src/graghql-query-types.ts

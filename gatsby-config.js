@@ -1,4 +1,4 @@
-require('dotenv').config()
+pullInEnvironmentVariablesFromEnvFile();
 
 module.exports = {
   siteMetadata: {
@@ -15,4 +15,8 @@ module.exports = {
       },
     },
   ],
+}
+
+function pullInEnvironmentVariablesFromEnvFile() {
+  require('dotenv').config()
 }

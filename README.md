@@ -10,15 +10,29 @@ First, install dependencies with NPM:
 npm i
 ```
 
-Create an env file using the example as a template:
+Create an env file, using the example as a template:
 ```
 cp .env.example .env
 ```
 
-To run the project in development mode:
+Run the project in development mode:
 ```
 npm run develop
 ```
+
+Whilst running in development mode, gennrate a GraphQL schema.json file:
+```
+npm run graphql-schema 
+```
+
+Once the schema has been generated, Typescript types for queries can be generated:
+```
+npm run graphql-queries
+```
+
+Typechecking can be performed with `npm run typecheck`.  Make sure the generated query types are up to date or this will fail.
+
+Linting can be performed with `npm run lint`.
 
 ## Building
 
@@ -27,7 +41,7 @@ The generated site will be built into the `public` directory by running the buil
 npm run build
 ```
 
-This is just static HTML/JS/CSS and can be served by any web server.  To easily run the production website:
+This is just static HTML/JS/CSS so can be served by any web server.  To easily run the production website:
 ```
 npm start
 ```
