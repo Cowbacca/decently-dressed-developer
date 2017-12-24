@@ -16,6 +16,7 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-react-next`,
   ],
 }
 

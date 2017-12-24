@@ -4,17 +4,19 @@ import {ArticleQueryQuery} from "../graghql-query-types";
 class ArticleTemplate extends React.Component<{ data: ArticleQueryQuery }> {
   render() {
     const article = this.props.data.contentfulArticle
-    return <div>
-      <h1>{article.title}</h1>
+    return <article>
+      <header>
+        <h1>{article.title}</h1>
+      </header>
       <div dangerouslySetInnerHTML={{__html: article.body.childMarkdownRemark.html}}/>
-    </div>
+    </article>
   }
 }
 
 export default ArticleTemplate
 
 export const pageQuery = graphql`
-  query articleQuery($id: String) {
+  query ArticleQuery($id: String) {
     contentfulArticle(id: {eq: $id}) {
       title
       body {
