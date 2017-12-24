@@ -6,10 +6,7 @@ interface IndexPageProps {
   data: IndexQueryQuery
 }
 
-const IndexPage = ({data}: IndexPageProps) => [
-  <header>
-    <p>Style means more than just using spaces instead of tabs.</p>
-  </header>,
+const IndexPage = ({data}: IndexPageProps) => (
   <section>
     <h2>All Articles</h2>
     <ul>
@@ -23,8 +20,8 @@ const IndexPage = ({data}: IndexPageProps) => [
         )
       )}
     </ul>
-  </section>,
-]
+  </section>
+)
 
 export default IndexPage
 

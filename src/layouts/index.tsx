@@ -13,6 +13,7 @@ const Header = () => (
         The Decently Dressed Developer
       </Link>
     </h1>
+    <p>Style means more than just using spaces instead of tabs.</p>
   </header>
 )
 
