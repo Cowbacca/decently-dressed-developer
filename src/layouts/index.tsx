@@ -43,8 +43,11 @@ const TemplateWrapper = ({children}: GatsbyLayoutProps) => (
       meta={[
         {charSet: 'utf-8'},
         {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-        {name: 'description', content: 'Cool website for cool people'},
-        {name: 'keywords', content: 'cool'}
+        {name: 'description', content: 'Teaching nerds how to dress a little better since 2017.'},
+        {
+          name: 'keywords',
+          content: 'decently,dressed,developer,programming,clothes,menswear,style,fashion,software,development'
+        }
       ]}
     />
     <Header/>
