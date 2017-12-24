@@ -47,7 +47,8 @@ const TemplateWrapper = ({children}: GatsbyLayoutProps) => (
         {
           name: 'keywords',
           content: 'decently,dressed,developer,programming,clothes,menswear,style,fashion,software,development'
-        }
+        },
+        {name: 'google-site-verification', content: 'MpRgP__wtu_V3Ph1xaa-T_92wDzzm1-ygsFzm-9b4dI'},
       ]}
     />
     <Header/>
