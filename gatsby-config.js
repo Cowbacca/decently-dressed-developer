@@ -2,7 +2,7 @@ pullInEnvironmentVariablesFromEnvFile();
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    siteUrl: process.env.SITE_URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sitemap`,
   ],
 }
 
