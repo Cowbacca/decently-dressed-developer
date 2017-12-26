@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {truncate} from 'lodash'
-import {renderToStaticMarkup} from "react-dom/server";
+import {renderToStaticMarkup} from 'react-dom/server'
+import {Parser} from 'htmlparser2'
 
 interface ArticlePreviewProps {
   header: JSX.Element
@@ -31,7 +32,20 @@ export default class ArticlePreview extends React.PureComponent<ArticlePreviewPr
 }
 
 function textContentFromJsx(jsx: JSX.Element) {
-  const div = document.createElement('div');
-  div.innerHTML = renderToStaticMarkup(jsx)
-  return div.textContent
+  const htmlString = renderToStaticMarkup(jsx)
+  return allTextContentFromHtmlString(htmlString)
+}
+
+function allTextContentFromHtmlString(htmlString: string) {
+  let allText = ''
+
+  const htmlParser = new Parser({
+    ontext: text => {
+      allText += text
+    }
+  })
+
+  htmlParser.parseComplete(htmlString)
+
+  return allText
 }
