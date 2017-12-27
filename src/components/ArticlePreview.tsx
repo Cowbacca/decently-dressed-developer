@@ -6,21 +6,25 @@ import {Parser} from 'htmlparser2'
 interface ArticlePreviewProps {
   header: JSX.Element
   content: JSX.Element
+  footer: JSX.Element
   length: number
 }
 
 export default class ArticlePreview extends React.PureComponent<ArticlePreviewProps> {
   render() {
-    const {header} = this.props
+    const {header, footer} = this.props
     return (
-      <section>
+      <article>
         <header>
           {header}
         </header>
         <p>
           {this.truncatedContent()}
         </p>
-      </section>
+        <footer>
+          {footer}
+        </footer>
+      </article>
     )
   }
 
