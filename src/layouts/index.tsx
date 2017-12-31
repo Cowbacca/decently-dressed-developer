@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import './index.css'
+import 'prismjs/themes/prism.css'
 
 const Header = () => (
   <header style={{textAlign: 'center'}}>
