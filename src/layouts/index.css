@@ -6,15 +6,24 @@ body {
     margin: 40px auto;
     padding: 0 10px;
     font: 1em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans", sans-serif;
-    color: #444
+    color: #444;
 }
 
 h1, h2, h3 {
-    line-height: 1.2
+    line-height: 1.2;
 }
 
 blockquote {
     font-style: italic;
     padding-left: 1em;
     border-left: 3px solid #ccc;
+}
+
+a {
+    color: #3b8bba;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #265778;
 }
