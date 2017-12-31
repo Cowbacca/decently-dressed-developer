@@ -5,30 +5,34 @@ import Helmet from 'react-helmet'
 import './index.css'
 
 const Header = () => (
-  <header>
+  <header style={{textAlign: 'center'}}>
     <h1>
       <Link
         to="/"
+        style={{
+          textDecoration: 'none',
+          color: '#444',
+          fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif'
+        }}
       >
-        The Decently Dressed Developer
+        Decently Dressed Developer
       </Link>
     </h1>
-    <p>Style means more than just using spaces instead of tabs.</p>
   </header>
 )
 
 const Footer = () => (
   <footer style={{paddingTop: '1em'}}>
-      <a href="https://www.contentful.com/" rel="nofollow" target="_blank">
-        <img
-          src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-          style={{
-            maxWidth: '100px',
-            width: '100%'
-          }}
-          alt="Powered by Contentful"
-        />
-      </a>
+    <a href="https://www.contentful.com/" rel="nofollow" target="_blank">
+      <img
+        src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
+        style={{
+          maxWidth: '100px',
+          width: '100%'
+        }}
+        alt="Powered by Contentful"
+      />
+    </a>
   </footer>
 )
 
