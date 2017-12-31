@@ -13,7 +13,7 @@ async function fetchAllArticles(graphql) {
   const result = await graphql(
     `
         {
-          allContentfulArticle{
+          allContentfulArticle(sort: {fields: [createdAt], order: DESC}) {
             edges {
               node {
                 id
@@ -36,13 +36,17 @@ function createArticlePages(boundActionCreators, allArticles) {
   const articleTemplate = path.resolve(`./src/templates/article.tsx`)
 
   allArticles
-    .forEach(article => {
+    .forEach((article, index) => {
+      const prev = index === allArticles.length - 1 ? undefined : allArticles[index + 1].slug
+      const next = index === 0 ? undefined : allArticles[index - 1].slug
       const {id, slug} = article
       createPage({
         path: `/articles/${slug}/`,
         component: slash(articleTemplate),
         context: {
           id,
+          prev,
+          next
         },
       })
     })
