@@ -9,30 +9,27 @@ interface IndexPageProps {
 
 const ARTICLE_PREVIEW_LENGTH = 400
 
-const IndexPage = ({data}: IndexPageProps) => (
-  <section>
-    <h2>All Articles</h2>
-    {data.allContentfulArticle.edges.map(
-      (edge, index) => (
-        <ArticlePreview
-          key={index}
-          header={
-            <h3>{edge.node.title}</h3>
-          }
-          content={
-            <div dangerouslySetInnerHTML={{__html: edge.node.body.childMarkdownRemark.html}}/>
-          }
-          footer={
-            <Link to={`/articles/${edge.node.slug}`}>
-              read more
-            </Link>
-          }
-          length={ARTICLE_PREVIEW_LENGTH}
-        />
-      )
-    )}
-  </section>
-)
+const IndexPage = ({data}: IndexPageProps) => {
+  return data.allContentfulArticle.edges.map(
+    (edge, index) => (
+      <ArticlePreview
+        key={index}
+        header={
+          <h3>{edge.node.title}</h3>
+        }
+        content={
+          <div dangerouslySetInnerHTML={{__html: edge.node.body.childMarkdownRemark.html}}/>
+        }
+        footer={
+          <Link to={`/articles/${edge.node.slug}`}>
+            read more
+          </Link>
+        }
+        length={ARTICLE_PREVIEW_LENGTH}
+      />
+    )
+  )
+}
 
 export default IndexPage
 
