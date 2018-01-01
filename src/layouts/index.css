@@ -2,9 +2,6 @@
  See http://perfectmotherfuckingwebsite.com/
  */
 body {
-    max-width: 650px;
-    margin: 40px auto;
-    padding: 0 10px;
     font: 1em -apple-system, BlinkMacSystemFont, "avenir next", avenir, "Segoe UI", "lucida grande", "helvetica neue", helvetica, "Fira Sans", roboto, noto, "Droid Sans", cantarell, oxygen, ubuntu, "franklin gothic medium", "century gothic", "Liberation Sans", sans-serif;
     color: #444;
 }
@@ -26,4 +23,16 @@ a {
 
 a:visited {
     color: #265778;
+}
+
+.content {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+nav a, nav a:visited {
+    margin: 1em;
+    color: #444;
+    font-size: x-large;
 }

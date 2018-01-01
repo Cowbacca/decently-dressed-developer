@@ -6,25 +6,60 @@ import './index.css'
 import 'prismjs/themes/prism.css'
 
 const Header = () => (
-  <header style={{textAlign: 'center'}}>
-    <h1>
-      <Link
-        to="/"
-        style={{
-          color: '#444',
-          border: 'none',
-          fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif',
-        }}
-      >
-        Decently Dressed Developer
-      </Link>
-    </h1>
+  <header>
+    <div style={{display: 'flex', padding: '0 1em'}}>
+      <div style={{display: 'flex', alignItems: 'baseline'}}>
+        <h1>
+          <Link
+            to="/"
+            style={{
+              color: '#444',
+              border: 'none',
+              fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif',
+            }}
+          >
+            Decently Dressed Developer
+          </Link>
+        </h1>
+      </div>
+      <nav style={{
+        display: 'flex',
+        flexBasis: '0%',
+        flexGrow: 1,
+        flexShrink: 1,
+        flex: 1,
+        alignItems: 'center',
+        flexDirection: 'row',
+        margin: '0 1em'
+      }}>
+        <a
+          href="https://github.com/cowbacca/decently-dressed-developer"
+        >
+          source
+        </a>
+        <Link
+          to="/about"
+        >
+          about
+        </Link>
+      </nav>
+    </div>
   </header>
 )
 
 const Footer = () => (
   <footer style={{paddingTop: '1.5em'}}>
-    <a href="https://www.contentful.com/" rel="nofollow" target="_blank">
+    <a
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex'
+      }}
+      href="https://www.contentful.com/"
+      rel="nofollow"
+      target="_blank"
+    >
       <img
         src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
         style={{
@@ -57,8 +92,10 @@ const TemplateWrapper = ({children}: GatsbyLayoutProps) => [
     ]}
   />,
   <Header/>,
-  children(),
-  <Footer/>,
+  <div className='content'>
+    {children()}
+    <Footer/>
+  </div>,
 ]
 
 export default TemplateWrapper
