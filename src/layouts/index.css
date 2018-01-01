@@ -32,7 +32,7 @@ a:visited {
     margin: auto;
 }
 
-.nav-link {
+.nav-link, .nav-link:visited {
     flex: 1;
     color: #444;
     font-size: x-large;
