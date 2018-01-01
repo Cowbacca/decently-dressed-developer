@@ -13,7 +13,7 @@ const Header = () => (
         color: '#444',
         fontSize: 'x-large',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
       }}
          href="https://github.com/cowbacca/decently-dressed-developer"
@@ -41,7 +41,7 @@ const Header = () => (
         color: '#444',
         fontSize: 'x-large',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
       }}
             to="/about"
