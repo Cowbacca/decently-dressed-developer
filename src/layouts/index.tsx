@@ -7,42 +7,47 @@ import 'prismjs/themes/prism.css'
 
 const Header = () => (
   <header>
-    <div style={{display: 'flex', padding: '0 1em'}}>
-      <div style={{display: 'flex', alignItems: 'baseline'}}>
-        <h1>
-          <Link
-            to="/"
-            style={{
-              color: '#444',
-              border: 'none',
-              fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif',
-            }}
-          >
-            Decently Dressed Developer
-          </Link>
-        </h1>
-      </div>
-      <nav style={{
-        display: 'flex',
-        flexBasis: '0%',
-        flexGrow: 1,
-        flexShrink: 1,
+    <div style={{display: 'flex'}}>
+      <a style={{
         flex: 1,
+        color: '#444',
+        fontSize: 'x-large',
+        display: 'flex',
+        justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row',
-        margin: '0 1em'
+      }}
+         href="https://github.com/cowbacca/decently-dressed-developer"
+      >
+        source
+      </a>
+      <h1 style={{
+        flex: 1,
+        textAlign: 'center',
       }}>
-        <a
-          href="https://github.com/cowbacca/decently-dressed-developer"
-        >
-          source
-        </a>
         <Link
-          to="/about"
+          to="/"
+          style={{
+            color: '#444',
+            border: 'none',
+            fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif',
+          }}
         >
-          about
+          Decently Dressed Developer
         </Link>
-      </nav>
+      </h1>
+      <Link style={{
+        flex: 1,
+        textAlign: 'center',
+        color: '#444',
+        fontSize: 'x-large',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+            to="/about"
+      >
+        about
+      </Link>
     </div>
   </header>
 )
