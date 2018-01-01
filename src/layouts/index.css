@@ -31,3 +31,11 @@ a:visited {
     max-width: 650px;
     margin: auto;
 }
+
+.nav-link {
+    flex: 1;
+    color: #444;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}

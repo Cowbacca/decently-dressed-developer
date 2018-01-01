@@ -8,15 +8,10 @@ import 'prismjs/themes/prism.css'
 const Header = () => (
   <header>
     <div style={{display: 'flex'}}>
-      <a style={{
-        flex: 1,
-        color: '#444',
-        fontSize: 'x-large',
-        display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-      }}
-         href="https://github.com/cowbacca/decently-dressed-developer"
+      <a
+        className="nav-link"
+        style={{justifyContent: 'flex-end'}}
+        href="https://github.com/cowbacca/decently-dressed-developer"
       >
         source
       </a>
@@ -35,16 +30,10 @@ const Header = () => (
           Decently Dressed Developer
         </Link>
       </h1>
-      <Link style={{
-        flex: 1,
-        textAlign: 'center',
-        color: '#444',
-        fontSize: 'x-large',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-      }}
-            to="/about"
+      <Link
+        className="nav-link"
+        style={{justifyContent: 'flex-start'}}
+        to="/about"
       >
         about
       </Link>
