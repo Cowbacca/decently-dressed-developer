@@ -20,7 +20,7 @@ Run the project in development mode:
 npm run develop
 ```
 
-Whilst running in development mode, gennrate a GraphQL schema.json file:
+Whilst running in development mode, generate a GraphQL schema.json file:
 ```
 npm run graphql-schema 
 ```

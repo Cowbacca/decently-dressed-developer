@@ -7,7 +7,7 @@ import 'prismjs/themes/prism.css'
 
 const Header = () => (
   <header>
-    <div style={{display: 'flex'}}>
+    <div style={{display: 'flex',}}>
       <a
         className="nav-link"
         style={{justifyContent: 'flex-end'}}
@@ -42,7 +42,7 @@ const Header = () => (
 )
 
 const Footer = () => (
-  <footer style={{paddingTop: '1.5em'}}>
+  <footer>
     <a
       style={{
         flex: 1,
