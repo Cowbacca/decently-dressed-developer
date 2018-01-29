@@ -6,35 +6,30 @@ import './index.css'
 import 'prismjs/themes/prism.css'
 
 const Header = () => (
-  <header>
-    <div style={{display: 'flex', }}>
+  <header
+    className="page-header"
+  >
+    <div style={{display: 'flex'}}>
       <a
         className="nav-link"
-        style={{justifyContent: 'flex-end'}}
+        style={{justifyContent: 'center'}}
         href="https://github.com/cowbacca/decently-dressed-developer"
       >
         source
       </a>
       <h1
-        style={{
-          flex: 1,
-          textAlign: 'center',
-        }}
+        className="header-title"
       >
         <Link
           to="/"
-          style={{
-            color: '#444',
-            border: 'none',
-            fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif',
-          }}
+          className="title-font"
         >
-          Decently Dressed Developer
+          Dᴇᴄᴇɴᴛʟʏ Dʀᴇssᴇᴅ Dᴇᴠᴇʟᴏᴘᴇʀ
         </Link>
       </h1>
       <Link
         className="nav-link"
-        style={{justifyContent: 'flex-start'}}
+        style={{justifyContent: 'center'}}
         to="/about"
       >
         about
@@ -44,7 +39,9 @@ const Header = () => (
 )
 
 const Footer = () => (
-  <footer>
+  <footer
+    className="page-footer"
+  >
     <a
       style={{
         flex: 1,
@@ -58,11 +55,8 @@ const Footer = () => (
     >
       <img
         src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-        style={{
-          maxWidth: '100px',
-          width: '100%'
-        }}
         alt="Powered by Contentful"
+        className="contentful-logo"
       />
     </a>
   </footer>

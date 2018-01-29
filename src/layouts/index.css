@@ -44,3 +44,29 @@ a:visited {
     width: 100%
 }
 
+.contentful-logo {
+    max-width: 100px;
+}
+
+.page-header {
+    margin: 3em 0;
+}
+
+.page-footer {
+    margin: 3em 0;
+}
+
+.header-title {
+    flex: 1;
+    text-align: center;
+}
+
+.header-title > a:visited {
+    color: #444;
+}
+
+.title-font {
+    font-weight: normal;
+    font-size: 1.3em;
+}
+
