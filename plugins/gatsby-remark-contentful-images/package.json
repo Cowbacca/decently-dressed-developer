@@ -1,0 +1,8 @@
+{
+  "name": "gatsby-remark-contentful-images",
+  "description": "Plugin for Remark to provide responsive srcset for Contentful images.",
+  "author": "Angus J Goldmsith <angus@dashery.co.uk>",
+  "dependencies": {
+    "unist-util-select": "^1.5.0"
+  }
+}
